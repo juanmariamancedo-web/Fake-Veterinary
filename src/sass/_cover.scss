@@ -1,0 +1,39 @@
+.cover{
+    display: flex;
+
+    justify-content: space-around;
+
+    height: 500px;
+    width: 100vw;
+
+    background: green url("../img/cover.jpg") center center / cover no-repeat  border-box border-box;
+    .grid{
+        display: grid;
+
+        width: 70%;
+        height: 500px;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        align-items: center;
+
+        .tarjeta{
+            height: 250px;
+            background-color: rebeccapurple;
+        }
+
+        .img{
+            display: flex;
+
+            align-self: end;
+            justify-content: center;
+            align-items: flex-end;
+
+            img{
+                max-width: 50%;
+                height: auto;
+            }
+        }
+    }
+}
