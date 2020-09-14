@@ -7,6 +7,26 @@ body {
   margin-top: 0;
 }
 
+:root {
+  --min-height-cover: 500px;
+}
+@media screen and (max-width: 600px) {
+  :root {
+    --min-height-cover: 100vh;
+    --width-conteiner: 90%;
+  }
+}
+@media screen and (max-width: 992px) {
+  :root {
+    --width-conteiner: 85%;
+  }
+}
+@media screen and (min-width: 993px) {
+  :root {
+    --width-conteiner: 70%;
+  }
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -19,17 +39,23 @@ body {
 .cover {
   display: flex;
   justify-content: space-around;
-  height: 500px;
+  min-height: var(--min-height-cover);
   width: 100vw;
   background: green url("../img/cover.jpg") center center/cover no-repeat border-box border-box;
 }
 .cover .grid {
   display: grid;
-  width: 70%;
-  height: 500px;
+  width: var(--width-conteiner);
+  min-height: var(--min-height-cover);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .cover .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px auto;
+  }
 }
 .cover .grid .tarjeta {
   height: 250px;
@@ -37,6 +63,7 @@ body {
 }
 .cover .grid .img {
   display: flex;
+  height: auto;
   align-self: end;
   justify-content: center;
   align-items: flex-end;

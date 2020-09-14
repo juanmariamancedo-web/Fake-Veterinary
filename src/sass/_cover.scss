@@ -3,19 +3,23 @@
 
     justify-content: space-around;
 
-    height: 500px;
+    min-height: var(--min-height-cover);
     width: 100vw;
 
     background: green url("../img/cover.jpg") center center / cover no-repeat  border-box border-box;
     .grid{
         display: grid;
 
-        width: 70%;
-        height: 500px;
+        width: var(--width-conteiner);
+        min-height: var(--min-height-cover);
 
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
 
+        @media screen and (max-width: 600px){
+            grid-template-columns: 1fr;
+            grid-template-rows: 500px auto;    
+        }
         align-items: center;
 
         .tarjeta{
@@ -25,6 +29,8 @@
 
         .img{
             display: flex;
+
+            height: auto;
 
             align-self: end;
             justify-content: center;

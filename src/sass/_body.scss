@@ -6,3 +6,19 @@ body{
     box-sizing: content-box;
     margin-top: 0;
 }
+
+:root{
+    --min-height-cover: 500px;
+    @media screen and (max-width: 600px){
+        --min-height-cover: 100vh;
+        --width-conteiner: 90%;   
+    } 
+
+    @media screen and (max-width: 992px){        
+        --width-conteiner: 85%;
+    }
+
+    @media screen and (min-width: 993px){        
+        --width-conteiner: 70%;
+    }
+}
