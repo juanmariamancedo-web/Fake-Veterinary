@@ -1,0 +1,48 @@
+.footer{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+    padding: 20px;
+
+    background-color: #4AD9AB;
+
+    ul{
+        margin: 0;
+
+        padding: 0;
+
+        list-style: none;
+
+        > li {
+            text-align: center;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            > a{
+                display: inline-block;
+                @include text;
+
+                white-space: nowrap;
+                
+                text-decoration: none;
+    
+                &[href^="tel:"]::before{
+                    font-family: jm-maquetador-web;
+                    vertical-align: middle;
+                    content: "d";
+                }
+        
+                &[href^="mailto:"]::before{
+                    font-family: jm-maquetador-web;
+                    vertical-align: middle;
+                    content: "b";
+                }
+            }
+        }
+    }
+}
