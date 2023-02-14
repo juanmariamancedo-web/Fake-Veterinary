@@ -32,15 +32,15 @@
                 text-decoration: none;
     
                 &[href^="tel:"]::before{
-                    font-family: jm-maquetador-web;
+                    font-family: agencia;
                     vertical-align: middle;
                     content: "d";
                 }
         
                 &[href^="mailto:"]::before{
-                    font-family: jm-maquetador-web;
+                    font-family: agencia;
                     vertical-align: middle;
-                    content: "b";
+                    content: "e";
                 }
             }
         }
